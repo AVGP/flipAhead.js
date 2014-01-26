@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>FlipAhead.js Demo - Page 2</title>
+        <link rel="previous" href="index.html" />
+        <link rel="next" href="page3.html" />
+        <script src="../flipAhead.js" type="text/javascript"></script>
+        <style>
+            html, body {
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FlipAhead.js Demo - Page 2</h1>
+        <p>Swipe to the left or right with two fingers to change the page.</p>
+
+        <script>
+            document.body.addEventListener("touchstart", FlipAhead.handle);
+            document.addEventListener("touchend", FlipAhead.handle);
+        </script>
+    </body>
+</html>
