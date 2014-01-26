@@ -2,7 +2,7 @@ var flipAhead = function(wnd) {
   var self = {},
       gestureStartCoords = [],
       pageLinks = {
-        prev: document.head.querySelector("link[rel='previous']") && document.head.querySelector("link[rel='previous']").href,
+        prev: document.head.querySelector("link[rel='prev']") && document.head.querySelector("link[rel='previous']").href,
         next: document.head.querySelector("link[rel='next']") && document.head.querySelector("link[rel='next']").href
       };
   
