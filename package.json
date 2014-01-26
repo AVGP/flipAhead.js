@@ -1,0 +1,27 @@
+	
+{
+  "name": "flipAhead.js",
+  "version": "0.0.1",
+  "description": "Flip ahead for everyone. Swipe with two fingers to navigate thru pages.",
+  "main": "flipAhead.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start conf/karma-ci.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AVGP/flipAhead.js.git"
+  },
+  "author": "AVGP (Martin Naumann)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AVGP/flipAhead.js/issues"
+  },
+  "devDependencies": {
+    "karma": "0.10.9",
+    "karma-coverage": "~0.1",
+    "phantomjs": "1.9.6-0"
+  }
+}
