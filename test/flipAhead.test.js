@@ -4,7 +4,7 @@ describe("flipAhead", function() {
   });
   
   it("should react to two-finger swipe right", function() {
-    document.head.innerHTML += "<link rel='previous' href='prev.html' /><link rel='next' href='next.html' />";
+    document.head.innerHTML += "<link rel='prev' href='prev.html' /><link rel='next' href='next.html' />";
 
     var testWnd = {
       location:{
@@ -47,7 +47,7 @@ describe("flipAhead", function() {
   });
   
   it("should react to two-finger swipe left", function() {
-    document.head.innerHTML += "<link rel='previous' href='prev.html' /><link rel='next' href='next.html' />";
+    document.head.innerHTML += "<link rel='prev' href='prev.html' /><link rel='next' href='next.html' />";
 
     var testWnd = {
       location:{
