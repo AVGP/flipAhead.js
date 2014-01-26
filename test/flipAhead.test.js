@@ -3,7 +3,7 @@ describe("flipAhead", function() {
     expect(window.FlipAhead).toBeTruthy();
   });
   
-  it("should react to touch events", function() {
+  it("should react to two-finger swipe right", function() {
     document.head.innerHTML += "<link rel='previous' href='prev.html' /><link rel='next' href='next.html' />";
 
     var testWnd = {
@@ -24,7 +24,8 @@ describe("flipAhead", function() {
           clientX: 120,
           clientY: 200
         }
-      ]
+      ],
+      preventDefault: function() {}
     });
     
     testFlipAhead.handle({
@@ -38,13 +39,14 @@ describe("flipAhead", function() {
           clientX: 220,
           clientY: 200
         }
-      ]
+      ],
+      preventDefault: function() {}
     });
     
-    expect(testWnd.location.href).toBe(window.location.href.replace("context.html","next.html"));
+    expect(testWnd.location.href).toBe(window.location.href.replace("context.html","prev.html"));
   });
   
-  it("should react to touch events", function() {
+  it("should react to two-finger swipe left", function() {
     document.head.innerHTML += "<link rel='previous' href='prev.html' /><link rel='next' href='next.html' />";
 
     var testWnd = {
@@ -65,7 +67,8 @@ describe("flipAhead", function() {
           clientX: 150,
           clientY: 200
         }
-      ]
+      ],
+      preventDefault: function() {}
     });
     
     testFlipAhead.handle({
@@ -79,10 +82,11 @@ describe("flipAhead", function() {
           clientX: 100,
           clientY: 200
         }
-      ]
+      ],
+      preventDefault: function() {}
     });
     
-    expect(testWnd.location.href).toBe(window.location.href.replace("context.html","prev.html"));
+    expect(testWnd.location.href).toBe(window.location.href.replace("context.html","next.html"));
   });
   
 });
