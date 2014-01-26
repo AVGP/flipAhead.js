@@ -1,6 +1,8 @@
 flipAhead.js
 ============
 
+[![Build Status](https://drone.io/github.com/AVGP/flipAhead.js/status.png)](https://drone.io/github.com/AVGP/flipAhead.js/latest)
+
 I like [flip ahead browsing](http://msdn.microsoft.com/en-us/library/ie/jj883726.aspx) for websites like magazines or blogs. 
 Unluckily it's only supported in Internet Explorer, so I made this tiny lib to give it to all browsers. Swipe with two fingers to navigate between pages.
 
