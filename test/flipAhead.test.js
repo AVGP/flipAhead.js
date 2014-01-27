@@ -171,4 +171,32 @@ describe("flipAhead", function() {
     
     expect(testWnd.location.href).not.toBe(window.location.href.replace("context.html","next.html"));
   });
+  
+  it("should not do anything on a swipe with more than 2 fingers", function() {
+    document.head.innerHTML += "<link rel='previous' href='prev.html' /><link rel='next' href='next.html' />";
+
+    var testWnd = {
+      location:{
+        href: "http://www.website.com?varName=foo"
+      }
+    },
+    testFlipAhead = flipAhead(testWnd);
+    
+    var event = {
+      type: "touchstart",
+      touches: [
+        {
+          clientX: 250,
+          clientY: 100
+        }
+      ],
+      preventDefault: function() {}
+    };
+    
+    spyOn(event, "preventDefault");
+    
+    testFlipAhead.handle(event);
+    
+    expect(event.preventDefault).not.toHaveBeenCalled();
+  });
 });
