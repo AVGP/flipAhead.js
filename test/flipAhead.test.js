@@ -172,7 +172,7 @@ describe("flipAhead", function() {
     expect(testWnd.location.href).not.toBe(window.location.href.replace("context.html","next.html"));
   });
   
-  it("should not do anything on a swipe with more than 2 fingers", function() {
+  it("should not cancel touchend with less than two started gesture points", function() {
     document.head.innerHTML += "<link rel='previous' href='prev.html' /><link rel='next' href='next.html' />";
 
     var testWnd = {
@@ -183,8 +183,8 @@ describe("flipAhead", function() {
     testFlipAhead = flipAhead(testWnd);
     
     var event = {
-      type: "touchstart",
-      touches: [
+      type: "touchend",
+      changedTouches: [
         {
           clientX: 250,
           clientY: 100
@@ -194,9 +194,10 @@ describe("flipAhead", function() {
     };
     
     spyOn(event, "preventDefault");
-    
     testFlipAhead.handle(event);
     
     expect(event.preventDefault).not.toHaveBeenCalled();
   });
+  
+  
 });
