@@ -25,3 +25,15 @@ To allow the two finger scroll in every modern browser, include flipAhead.js and
 ```
 
 Check out [a live demo here](http://avgp.github.io/flipAhead.js/demo)
+
+## Testing
+
+FlipAhead.js comes with a suite of tests.  
+To run them, type
+
+```shell
+npm test
+```
+
+## Contributing
+See [Contribute.md](Contribute.md)
