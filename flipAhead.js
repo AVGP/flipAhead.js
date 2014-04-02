@@ -48,8 +48,8 @@ var flipAhead = function(wnd) {
     if(event.type != "touchstart"  && event.type != "touchend" && 
        event.type != "touchcancel" && event.type != "touchleave") return;
 
-    if((event.type == "touchstart" && event.touches.length != 3) || 
-       (event.type == "touchend"   && gestureStartCoords.length != 3)) {
+    if((event.type == "touchstart" && event.touches.length != 2) || 
+       (event.type == "touchend"   && gestureStartCoords.length != 2)) {
       cleanupGestureCoords(event.type == "touchstart" ? event.touches : event.changedTouches);
       return;
     }
